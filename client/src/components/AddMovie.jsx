@@ -2,9 +2,9 @@ import React from 'react';
 
 class AddMovie extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      movieTitle: ''
+      movieTitle: '',
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,8 +19,8 @@ class AddMovie extends React.Component {
     console.log(`${this.state.movieTitle} was added!`)
     this.props.addMovie(this.state.movieTitle);
     this.setState({
-      movieTitle: ''
-    })
+      movieTitle: '',
+    });
   }
 
   render() {
@@ -29,7 +29,7 @@ class AddMovie extends React.Component {
         <input onChange={this.handleChange} placeholder="Add movie title here..." />
         <button>Add</button>
       </form>
-    )
+    );
   }
 }
 
